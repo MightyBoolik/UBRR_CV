@@ -1,45 +1,63 @@
 plugins {
-    id "java-library"
-    id "application"
-    id "io.qameta.allure" version "2.8.1"
+    id 'java-library'
+    id 'application'
+    id 'io.qameta.allure' version '2.8.1'
 }
 
 repositories {
     mavenCentral()
 }
 
+def allureVersion = "2.13.8",
+    selenideVersion = "5.18.0",
+    junitVersion = "5.7.0"
+
 allure {
+    version = "${allureVersion}"
     autoconfigure = true
-    version = "2.13.8"
+    aspectjweaver = true
     useJUnit5 {
-        version = "2.13.8"
+        version = "${allureVersion}"
     }
 }
 
-compileTestJava {
+dependencies {
+    testImplementation (
+            "org.aspectj:aspectjweaver:1.9.6",
+            "com.codeborne:selenide:$selenideVersion",
+            "io.qameta.allure:allure-selenide:$allureVersion",
+            "ch.qos.logback:logback-classic:1.2.3",
+            "com.github.javafaker:javafaker:1.0.2",
+            "org.aeonbits.owner:owner:1.0.12",
+            "org.junit.jupiter:junit-jupiter-api:$junitVersion",
+            "org.junit.jupiter:junit-jupiter-params:$junitVersion")
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+}
+
+tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
 }
 
 tasks.withType(Test) {
     systemProperties += System.properties
-}
+    System.setProperty("chromeoptions.prefs", "intl.accept_languages=en")
 
-dependencies {
-    testImplementation "com.codeborne:selenide:5.18.0"
-    testImplementation "io.qameta.allure:allure-selenide:2.13.6"
-    testImplementation "org.slf4j:slf4j-simple:1.7.30"
-    testImplementation "org.aspectj:aspectjweaver:1.9.6"
-    testImplementation "org.junit.jupiter:junit-jupiter-api:5.7.0"
-    testImplementation "org.junit.jupiter:junit-jupiter-params:5.7.0"
-    testImplementation "org.aeonbits.owner:owner:1.0.12"
-    testImplementation "com.github.javafaker:javafaker:1.0.2"
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.7.0"
-}
+    if (System.getProperty("threads") != null) {
+        systemProperties += [
+                "junit.jupiter.execution.parallel.enabled"                 : true,
+                "junit.jupiter.execution.parallel.mode.default"            : 'concurrent',
+                "junit.jupiter.execution.parallel.mode.classes.default"    : 'concurrent',
+                "junit.jupiter.execution.parallel.config.strategy"         : 'fixed',
+                "junit.jupiter.execution.parallel.config.fixed.parallelism": System.getProperty("threads").toInteger()
+        ]
+    }
 
-tasks.withType(Test) {
-    systemProperties += System.properties
 }
-
 test {
     useJUnitPlatform()
+}
+task web(type: Test) {
+    useJUnitPlatform {
+        includeTags "web"
+    }
 }
