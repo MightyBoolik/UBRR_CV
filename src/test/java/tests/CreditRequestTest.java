@@ -1,20 +1,20 @@
 package tests;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class CreditRequestTest {
+@Tag("web")
+public class CreditRequestTest extends TestBase {
     @Test
-    void requestForCredit(){
+    void requestForCredit() {
         open("https://www.ubrr.ru/");
-        $(".menu_level_1 break-word list-reset").shouldHave(text("Кредиты")).click();
-        //$(byText("Кредиты")).click();
-        $(".submenu-col").shouldHave(text("Все кредиты"));
-        $(byText("Подобрать кредит")).click();
+        $$("div.menu-drop-7 .menu_level_1").find(text("Кредиты")).shouldBe(visible).click();
+        $$("ul li .menu_level_1 .item_1 has-submenu").findBy(text("Подобрать кредит")).click();
 
     }
 }
