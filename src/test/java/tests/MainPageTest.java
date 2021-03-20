@@ -15,14 +15,14 @@ public class MainPageTest extends TestBase {
     @Test
     @DisplayName("Main page should be loaded")
     void PageLoadedTest() {
-        open("https://www.ubrr.ru/");
+        open("");
         $(".horizont__title").shouldBe(visible);
     }
 
     @Test
     @DisplayName("Internet-bank")
     void InternetBankButtonTest() {
-        open("https://www.ubrr.ru/");
+        open("");
         sleep(5000);
         $$("div.g-header_i .btn-internet-bank").find(text("Интернет-банк")).click();
         $("div.popup-2__inner").shouldBe(visible);
@@ -33,7 +33,7 @@ public class MainPageTest extends TestBase {
     @Test
     @DisplayName("Test support chat")
     void phoneButtonTest() {
-        open("https://www.ubrr.ru/");
+        open("");
         $("div.g-main").shouldBe(visible);
         $("div.js-open-btn").click();
         $("div.js-close-btn").shouldBe(visible).click();

@@ -5,16 +5,16 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 @Tag("web")
 public class CreditRequestTest extends TestBase {
     @Test
     void requestForCredit() {
-        open("https://www.ubrr.ru/");
-        $$("div.menu-drop-7 .menu_level_1").find(text("Кредиты")).shouldBe(visible).click();
-        $$("ul li .menu_level_1 .item_1 has-submenu").findBy(text("Подобрать кредит")).click();
+        open("");
+        $("div.head_bottom div.menu-drop-7").shouldBe(visible);
+        $$(".head_bottom .break-word").find(text("Ещё...")).click();
+
 
     }
 }

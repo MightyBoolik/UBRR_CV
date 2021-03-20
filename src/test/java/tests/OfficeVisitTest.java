@@ -19,7 +19,7 @@ public class OfficeVisitTest extends TestBase {
     @DisplayName("Sign up for the office")
     void visitOfficeButtonTest() {
         Faker faker = new Faker();
-        open("https://www.ubrr.ru/");
+        open("");
         $x("//a[contains(.,'Записаться в офис')]").shouldBe(visible).click();
         switchTo().window(1);
         $x("//div[@class='header__title']").shouldBe(visible);
