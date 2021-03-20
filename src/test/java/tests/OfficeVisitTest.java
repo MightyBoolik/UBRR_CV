@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.$;
+import static io.qameta.allure.Allure.step;
 
 @Tag("web")
 public class OfficeVisitTest extends TestBase {
@@ -19,27 +19,53 @@ public class OfficeVisitTest extends TestBase {
     @DisplayName("Sign up for the office")
     void visitOfficeButtonTest() {
         Faker faker = new Faker();
-        open("");
-        $x("//a[contains(.,'Записаться в офис')]").shouldBe(visible).click();
+        step("Open main page", () -> {
+            open("");
+        });
+        step("Click sign for office button", () -> {
+            $x("//a[contains(.,'Записаться в офис')]").shouldBe(visible).click();
+        });
+
         switchTo().window(1);
-        $x("//div[@class='header__title']").shouldBe(visible);
-        $(".select-city__city").click();
-        $(".choice-city-modal__search-input").setValue("Уфа");
-        $(byText("Уфа")).click();
-        $(".choice-office__enabled").shouldBe(visible).click();
-        $("div.choice-office-modal__select-container").find(byText("Уфа г., Менделеева ул, д. 137")).click();
-        $(byText("OK")).click();
-        $(".form__select-wrappers").click();
-        $(byText("Другое")).shouldBe(visible).click();
-        $(".form__select-day").setValue("12.04.2021").pressEnter();
-        $(".time-piker-wrapper__input").click();
+        step("Header should be visible", () -> {
+            $x("//div[@class='header__title']").shouldBe(visible);
+        });
+        step("Choose your city", () -> {
+            $(".select-city__city").click();
+            $(".choice-city-modal__search-input").setValue("Уфа");
+            $(byText("Уфа")).click();
+        });
+        step("Choose nearest office", () -> {
+            $(".choice-office__enabled").shouldBe(visible).click();
+            $("div.choice-office-modal__select-container").find(byText("Уфа г., Менделеева ул, д. 137")).click();
+            $(byText("OK")).click();
+        });
+        step("Set visit date", () -> {
+            $(".form__select-wrappers").click();
+            $(byText("Другое")).shouldBe(visible).click();
+            $(".form__select-day").setValue("12.04.2021").pressEnter();
+
+        });
         sleep(3000);
-        $x("//div[contains(text(),'11:00')]").click();
-        $(".form__contacts-fullName").setValue("Кучаев Булат Салаватович").sendKeys(Keys.TAB);
-        $(".form__contacts-phone").setValue(faker.phoneNumber().subscriberNumber(10)).shouldBe(visible);
+        step("Set visit time", () -> {
+            $(".time-piker-wrapper__input").click();
+            $x("//div[contains(text(),'11:00')]").click();
+        });
+        step("Full name input", () -> {
+            $(".form__contacts-fullName").setValue("Кучаев Булат Салаватович").sendKeys(Keys.TAB);
+        });
+        step("Phone number input", () -> {
+            $(".form__contacts-phone").setValue(faker.phoneNumber().subscriberNumber(10)).shouldBe(visible);
+        });
+
         sleep(2000);
-        $(".form__contacts-email").shouldBe(visible).setValue("test@mail.ru").pressEnter();
-        $(byText("Записаться")).click();
-        $("div.thanks-wrapper__container").shouldHave(text("Ждем вас в отделении банка"));
+        step("Email input", () -> {
+            $(".form__contacts-email").shouldBe(visible).setValue("test@mail.ru").pressEnter();
+        });
+        step("Check visit`s registration", () -> {
+            $(byText("Записаться")).click();
+            $("div.thanks-wrapper__container").shouldHave(text("Ждем вас в отделении банка"));
+        });
+
     }
 }
