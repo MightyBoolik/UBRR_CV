@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 @Tag("web")
@@ -14,8 +13,7 @@ public class CreditRequestTest extends TestBase {
     void requestForCredit() {
         open("");
         $("div.head_bottom div.menu-drop-7").shouldBe(visible);
-        $$(".head_bottom .break-word").find(text("Вклады")).click();
-
+        $$(".head_bottom .break-word").find(text("Дебетовые карты")).click();
 
 
     }
