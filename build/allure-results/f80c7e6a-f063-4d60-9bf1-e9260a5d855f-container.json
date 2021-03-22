@@ -1,1 +1,0 @@
-{"uuid":"f80c7e6a-f063-4d60-9bf1-e9260a5d855f","name":"ContributionCalculateTest","children":["2f2d2339-a0c6-4754-9944-2262272c15cb"],"befores":[{"name":"configHelper","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1616358559225,"stop":1616358559436}],"afters":[],"links":[],"start":1616358559153,"stop":1616358560004}
