@@ -8,5 +8,4 @@
 **Стэк технологий**
 Java, Gradle, Junit5, Selenide, Allure Reports, Jenkins, Selenoid, Telegram Bot.
 
-**Видео теста**
-![alt text](https://github.com/MightyBoolik/UBRR_CV/blob/ba40e69aa0d295ce361e8d6ae8f7a473b7c2a2aa/Allure_ubrr.gif)
+![alt text](https://github.com/MightyBoolik/UBRR_CV/blob/ba40e69aa0d295ce361e8d6ae8f7a473b7c2a2aa/Allure_ubrr.gif"**Видео теста**")
