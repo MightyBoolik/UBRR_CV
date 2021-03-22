@@ -13,4 +13,4 @@ Java, Gradle, Junit5, Selenide, Allure Reports, Jenkins, Selenoid, Telegram Bot.
 
 **Видео теста**
 
-![alt text](https://github.com/MightyBoolik/UBRR_CV/files/blob/ba40e69aa0d295ce361e8d6ae8f7a473b7c2a2aa/Allure_ubrr.gif "**Видео теста**")
+![alt text](https://github.com/MightyBoolik/UBRR_CV/blob/0b58886d7af44c4196ea8f4a1ab0f5bb6552d4fb/files/Allure_ubrr.gif "**Видео теста**")
