@@ -1,4 +1,8 @@
 ## Тестирование сайта https://www.ubrr.ru/
+**Github** https://github.com/MightyBoolik/UBRR_CV
+
+**Jenkins** https://jenkins.autotests.cloud/job/C04-G08-MightyBoolik_qa_guru_UBRR_CV/
+
 
 - [X] - Проверка загрузки основных элементов на главной странице.
 
