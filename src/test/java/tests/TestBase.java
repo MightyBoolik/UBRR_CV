@@ -14,6 +14,7 @@ public class TestBase {
         configureDriver();
 
     }
+
     @AfterEach
     public void addAttachments() {
         String sessionId = getSessionId();

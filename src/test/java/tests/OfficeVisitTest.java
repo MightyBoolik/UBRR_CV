@@ -55,7 +55,7 @@ public class OfficeVisitTest extends TestBase {
             $(".form__contacts-fullName").setValue("Кучаев Булат Салаватович").sendKeys(Keys.TAB);
         });
         step("Phone number input", () -> {
-            $(".form__contacts-phone").setValue("9279279279").shouldBe(visible);
+            $(".form__contacts-phone").setValue(faker.phoneNumber().subscriberNumber(10)).shouldBe(visible);
         });
 
         sleep(2000);
