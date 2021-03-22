@@ -10,7 +10,7 @@ public class SliderTest {
     public void slider() {
         WebElement slider = $(".Slider__SliderBox-credit-calculator__dxxjdy-2");
         int width = slider.getSize().getWidth();
-        actions().dragAndDropBy(slider, ((width * 250) / 1000), 0).build().perform();
+        actions().dragAndDropBy(slider, ((width * 250) / 15000), 0).build().perform();
         System.out.println("Slider moved");
     }
 }

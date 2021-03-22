@@ -4,9 +4,6 @@ import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -24,8 +21,5 @@ public class ContributionCalculateTest extends TestBase {
         $(".Slider__Runner-credit-calculator__dxxjdy-5").hover();
         slider.slider();
 
-
-        //$x("//*[@class='Slider__Runner-credit-calculator__dxxjdy-5']").
-        //$x("//button[contains(.,'1')]").scrollTo().click()"| //button[contains(.,'Отправить')]").scrollTo().click();
     }
 }
