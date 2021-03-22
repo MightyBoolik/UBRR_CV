@@ -43,13 +43,13 @@ public class OfficeVisitTest extends TestBase {
         step("Set visit date", () -> {
             $(".form__select-wrappers").click();
             $(byText("Другое")).shouldBe(visible).click();
-            $(".form__select-day").setValue("12.04.2021").pressEnter();
+            $(".form__select-day").setValue("13.04.2021").pressEnter();
 
         });
         sleep(3000);
         step("Set visit time", () -> {
             $(".time-piker-wrapper__input").click();
-            $x("//div[contains(text(),'11:00')]").click();
+            $x("//div[contains(text(),'16:00')]").click();
         });
         step("Full name input", () -> {
             $(".form__contacts-fullName").setValue("Кучаев Булат Салаватович").sendKeys(Keys.TAB);
