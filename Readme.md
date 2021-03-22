@@ -19,3 +19,7 @@ Java, Gradle, Junit5, Selenide, Allure Reports, Jenkins, Selenoid, Telegram Bot.
 
 ![alt text](files/Allure_ubrr.png "Allure")
 ![alt text](files/Aluure1_ubrr.png "Allure")
+
+**Telegram-уведомления**
+
+![alt text](files/telegram_ubrr.png "Allure")
