@@ -13,7 +13,7 @@
 - [X] - Тест слайдера в кредитном калькуляторе.
 
 ## Стэк технологий
-Java, Gradle, Junit5, Selenide, Allure Reports, Jenkins, Selenoid, Telegram Bot.
+**Java, Gradle, Junit5, Selenide, Allure Reports, Jenkins, Selenoid, Telegram Bot.
 
 ## Видео теста
 
