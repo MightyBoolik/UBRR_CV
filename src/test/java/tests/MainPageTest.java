@@ -1,5 +1,6 @@
 package tests;
 
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -11,6 +12,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 @Tag("web")
 public class MainPageTest extends TestBase {
+    Faker faker = new Faker();
 
     @Test
     @DisplayName("Main page should be loaded")
@@ -36,7 +38,8 @@ public class MainPageTest extends TestBase {
         open("");
         $("div.g-main").shouldBe(visible);
         $("div.js-open-btn").click();
-        $("div.js-close-btn").shouldBe(visible).click();
+        $(byText("Заказать звонок")).click();
+        $("#call-api-form .js-form-tel").val(faker.phoneNumber().subscriberNumber(9)).click();
 
     }
 
