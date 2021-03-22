@@ -1,4 +1,4 @@
-**Тестирование сайта UBRR.RU**
+**Тестирование сайта https://www.ubrr.ru/**
 
 1.Проверка загрузки основных элементов на главной странице.
 
@@ -13,6 +13,13 @@ Java, Gradle, Junit5, Selenide, Allure Reports, Jenkins, Selenoid, Telegram Bot.
 
 **Видео теста**
 
-![alt text](https://github.com/MightyBoolik/UBRR_CV/files/blob/ba40e69aa0d295ce361e8d6ae8f7a473b7c2a2aa/Allure_ubrr.gif "**Видео теста**")
+![alt text](https://github.com/MightyBoolik/UBRR_CV/blob/0b58886d7af44c4196ea8f4a1ab0f5bb6552d4fb/files/Allure_ubrr.gif "**Видео теста**")
 
-###### Скриншоты
+**Скриншоты**
+
+![alt text](files/Allure_ubrr.png "Allure")
+![alt text](files/Aluure1_ubrr.png "Allure")
+
+**Telegram-уведомления**
+
+![alt text](files/telegram_ubrr.png "Allure")
