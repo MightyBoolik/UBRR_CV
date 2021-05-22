@@ -2,14 +2,16 @@ package config;
 
 import org.aeonbits.owner.Config;
 
-@Config.LoadPolicy(Config.LoadType.MERGE)
-@Config.Sources({
+import static org.aeonbits.owner.Config.*;
+
+@LoadPolicy(LoadType.MERGE)
+@Sources({
         "system:properties",
-        "classpath:remote_config.properties"
+        "classpath:config/remote_config.properties"
 })
 public interface WebConfig extends Config {
 
-    @Config.Key("url")
+    @Key("url")
     String url();
 
     @Key("web.remote.driver.user")
