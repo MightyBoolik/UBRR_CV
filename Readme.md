@@ -8,7 +8,6 @@
 
 - [X] - Тест слайдера в кредитном калькуляторе.
 
-:hammer: **Стек технологий**
 
 **Java, Gradle, Junit5, Selenide, Allure Reports, Jenkins, Selenoid, Telegram Bot.**
 
