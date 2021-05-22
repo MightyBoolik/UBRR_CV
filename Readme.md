@@ -26,6 +26,8 @@
 
 ![alt text](files/Screenshot_1.png "Allure")
 ![alt text](files/Screenshot_2.png "Allure")
+## Интеграция с Jira
+![alt text](files/Screenshot_4.png "Jira")
 
 [<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/java.png" alt="java_8" width="80" height="80"/>](https://www.oracle.com/ru/java/technologies/javase-jre8-downloads.html)
 [<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/junit_5.png" alt="junit_5" width="80" height="80"/>](https://junit.org/junit5/)
