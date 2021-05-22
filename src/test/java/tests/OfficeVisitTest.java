@@ -53,7 +53,7 @@ public class OfficeVisitTest extends TestBase {
         step("Choose nearest office", () -> {
             $(selectOfficeButton).shouldBe(visible).click();
             $(cityList).find(byText(officeAddress)).click();
-            $(byText("ОК")).click();
+            $(byText("OK")).click();
         });
         step("Set visit date", () -> {
             $(formService).click();
