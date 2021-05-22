@@ -8,6 +8,7 @@ import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.byLinkText;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
@@ -23,6 +24,7 @@ public class OfficeVisitTest extends TestBase {
             open("");
         });
         step("Click sign for office button", () -> {
+            //$(".credit-table__wrap").shouldBe(visible).shouldHave(text("Записаться в офис")).click();
             $x("//a[contains(.,'Записаться в офис')]").shouldBe(visible).click();
         });
 
@@ -43,7 +45,7 @@ public class OfficeVisitTest extends TestBase {
         step("Set visit date", () -> {
             $(".form__select-wrappers").click();
             $(byText("Другое")).shouldBe(visible).click();
-            $(".form__select-day").setValue("13.04.2021").pressEnter();
+            $(".form__select-day").setValue("13.06.2021").pressEnter();
 
         });
         sleep(3000);
@@ -54,6 +56,11 @@ public class OfficeVisitTest extends TestBase {
         step("Full name input", () -> {
             $(".form__contacts-fullName").setValue("Кучаев Булат Салаватович").sendKeys(Keys.TAB);
         });
+
+        step("Birthday info input", () -> {
+            $(".form__birthday").setValue("12.04.1994").sendKeys(Keys.TAB);
+        });
+
         step("Phone number input", () -> {
             $(".form__contacts-phone").setValue(faker.phoneNumber().subscriberNumber(10)).shouldBe(visible);
         });
