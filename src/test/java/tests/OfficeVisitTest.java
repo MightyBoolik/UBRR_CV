@@ -45,7 +45,7 @@ public class OfficeVisitTest extends TestBase {
         step("Set visit date", () -> {
             $(".form__select-wrappers").click();
             $(byText("Другое")).shouldBe(visible).click();
-            $(".form__select-day").setValue("13.06.2021").pressEnter();
+            $(".form__select-day").setValue("11.06.2021").pressEnter();
 
         });
         sleep(3000);
