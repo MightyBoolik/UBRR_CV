@@ -22,7 +22,6 @@
 
 ## :envelope: Поддержка Telegram-уведомлений
 
-![alt text](files/telegram_ubrr.png "Allure")
 ![alt text](files/notifi.png "Allure")
 ![alt text](files/notifi1.png "Allure")
 
