@@ -17,6 +17,7 @@
 
 ![alt text](files/Allure_ubrr.png "Allure")
 ![alt text](files/Aluure1_ubrr.png "Allure")
+![alt text](files/allure2_Ubrr.png "Allure")
 
 
 ## Telegram-уведомления
