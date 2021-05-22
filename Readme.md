@@ -27,11 +27,11 @@
 ![alt text](files/Screenshot_1.png "Allure")
 ![alt text](files/Screenshot_2.png "Allure")
 
-[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/java.png" alt="java_8" width="60" height="60"/>](https://www.oracle.com/ru/java/technologies/javase-jre8-downloads.html)
-[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/junit_5.png" alt="junit_5" width="100" height="100"/>](https://junit.org/junit5/)
-[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/selenide.png" alt="selenide" width="100" height="100"/>](https://ru.selenide.org/)
-[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/selenium.png" alt="selenium" width="100" height="100"/>](https://www.selenium.dev/)
-[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/gradle.png" alt="gradle" width="100" height="100"/>](https://gradle.org/)
-[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/allure.png" alt="allure" width="100" height="100"/>](https://docs.qameta.io/allure/)
-<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/slack.png" alt="slack" width="100" height="100"/>
-<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/telegram.png" alt="telegram" width="100" height="100"/>
+[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/java.png" alt="java_8" width="80" height="80"/>](https://www.oracle.com/ru/java/technologies/javase-jre8-downloads.html)
+[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/junit_5.png" alt="junit_5" width="80" height="80"/>](https://junit.org/junit5/)
+[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/selenide.png" alt="selenide" width="80" height="80"/>](https://ru.selenide.org/)
+[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/selenium.png" alt="selenium" width="80" height="80"/>](https://www.selenium.dev/)
+[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/gradle.png" alt="gradle" width="80" height="80"/>](https://gradle.org/)
+[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/allure.png" alt="allure" width="80" height="80"/>](https://docs.qameta.io/allure/)
+<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/slack.png" alt="slack" width="80" height="80"/>
+<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/telegram.png" alt="telegram" width="80" height="80"/>
