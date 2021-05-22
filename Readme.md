@@ -33,10 +33,13 @@
 ![alt text](files/Aluure1_ubrr.png "Allure")
 ![alt text](files/allure2_Ubrr.png "Allure")
 
-
 ## :envelope: Поддержка Telegram-уведомлений
 
 ![alt text](files/Screenshot_1.png "Allure")
 ![alt text](files/Screenshot_2.png "Allure")
 ## :information_source: Интеграция с Jira
 ![alt text](files/Screenshot_4.png "Jira")
+
+
+[![Telegram](https://img.shields.io/badge/-Telegram-0b0a1a?style=for-the-badge&logo=telegram&logoColor=27A0D9)](https://t.me/Mightyboolik)
+[![Vkontakte](https://img.shields.io/badge/-Vkontakte-0b0a1a?style=for-the-badge&logo=Vk&logoColor=4F7DB3)](https://vk.com/Mightyboolik)
