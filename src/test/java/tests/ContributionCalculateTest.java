@@ -18,21 +18,31 @@ public class ContributionCalculateTest extends TestBase {
     SliderTest slider = new SliderTest();
     Faker faker = new Faker();
 
+    private String sliderLine = ".Slider__SliderBox-credit-calculator__dxxjdy-2",
+            sliderPoint = ".Slider__Runner-credit-calculator__dxxjdy-5",
+            creditTime = ".ListTerms__Box-credit-calculator__sc-18rkehz-1",
+            creditButton = ".main-pic__btn-wrap .scroll-to-service",
+            mobileFrame = ".top-block #step_1",
+            inputNumber = "#OpenBkithreestepsForm_mobile",
+            submitButton = "btn_submit_step_1",
+            creditForm = "#tab-32910";
+
+
     @Test
     @DisplayName("Check income from contribution")
     void percentContTest() {
         open("");
-        $("#tab-32910").shouldHave(Condition.text("Рассчитайте свой кредит")).scrollTo();
-        $(".Slider__SliderBox-credit-calculator__dxxjdy-2").shouldBe(visible);
-        $(".Slider__Runner-credit-calculator__dxxjdy-5").hover();
+        $(creditForm).shouldHave(Condition.text("Рассчитайте свой кредит")).scrollTo();
+        $(sliderLine).shouldBe(visible);
+        $(sliderPoint).hover();
         slider.slider();
-        $(".ListTerms__Box-credit-calculator__sc-18rkehz-1").shouldBe(visible);
+        $(creditTime).shouldBe(visible);
         $(byText("5 лет")).click();
-        $(".main-pic__btn-wrap .scroll-to-service").click();
+        $(creditButton).click();
         switchTo().window(1);
-        $(".top-block #step_1").shouldHave(text("Для получения кредита введите номер телефона"));
-        $("#OpenBkithreestepsForm_mobile").val(faker.phoneNumber().subscriberNumber(10));
-        $(byName("btn_submit_step_1")).click();
+        $(mobileFrame).shouldHave(text("Для получения кредита введите номер телефона"));
+        $(inputNumber).val(faker.phoneNumber().subscriberNumber(10));
+        $(byName(submitButton)).click();
 
     }
 }

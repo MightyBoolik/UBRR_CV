@@ -14,6 +14,14 @@ import static com.codeborne.selenide.Selenide.*;
 public class MainPageTest extends TestBase {
     Faker faker = new Faker();
 
+    private String bankButton = "div.g-header_i .btn-internet-bank",
+            popup = "div.popup-2__inner",
+            googleButtonText = "Google Play",
+            mainPage = "div.g-main",
+            callButton = "div.js-open-btn",
+            callOrder = "Заказать звонок",
+            inputNumber = "#call-api-form .js-form-tel";
+
     @Test
     @DisplayName("Main page should be loaded")
     void PageLoadedTest() {
@@ -26,9 +34,9 @@ public class MainPageTest extends TestBase {
     void InternetBankButtonTest() {
         open("");
         sleep(5000);
-        $$("div.g-header_i .btn-internet-bank").find(text("Интернет-банк")).click();
-        $("div.popup-2__inner").shouldBe(visible);
-        $(byText("Google Play")).click();
+        $$(bankButton).find(text("Интернет-банк")).click();
+        $(popup).shouldBe(visible);
+        $(byText(googleButtonText)).click();
 
     }
 
@@ -36,10 +44,10 @@ public class MainPageTest extends TestBase {
     @DisplayName("Test support chat")
     void phoneButtonTest() {
         open("");
-        $("div.g-main").shouldBe(visible);
-        $("div.js-open-btn").click();
-        $(byText("Заказать звонок")).click();
-        $("#call-api-form .js-form-tel").val(faker.phoneNumber().subscriberNumber(9)).click();
+        $(mainPage).shouldBe(visible);
+        $(callButton).click();
+        $(byText(callOrder)).click();
+        $(inputNumber).val(faker.phoneNumber().subscriberNumber(9)).click();
 
     }
 

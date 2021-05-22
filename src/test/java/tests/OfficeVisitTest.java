@@ -1,6 +1,5 @@
 package tests;
 
-import com.github.javafaker.Faker;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -8,69 +7,84 @@ import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.byLinkText;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 @Tag("web")
 public class OfficeVisitTest extends TestBase {
+    private String signButton = "//a[contains(.,'Записаться в офис')]",
+            header = "//div[@class='header__title']",
+            selectCityButton = ".select-city__city",
+            searchCity = ".choice-city-modal__search-input",
+            city = "Уфа",
+            selectOfficeButton = ".choice-office__enabled",
+            cityList = "div.choice-office-modal__select-container",
+            officeAddress = "Уфа г., Менделеева ул, д. 137",
+            formService = ".form__select-wrappers",
+            visitDay = ".form__select-day",
+            visitTime = ".time-piker-wrapper__input",
+            visitOClock = "//div[contains(text(),'16:00')]",
+            fullnameInput = ".form__contacts-fullName",
+            birthdayInput = ".form__birthday",
+            phoneNumberInput = ".form__contacts-phone",
+            emailInput = ".form__contacts-email",
+            finishRegistration = "div.thanks-wrapper__container";
 
     @Test
     @DisplayName("Sign up for the office")
     void visitOfficeButtonTest() {
-        Faker faker = new Faker();
         step("Open main page", () -> {
             open("");
         });
         step("Click sign for office button", () -> {
-            $x("//a[contains(.,'Записаться в офис')]").shouldBe(visible).click();
+            $x(signButton).shouldBe(visible).click();
         });
 
         switchTo().window(1);
         step("Header should be visible", () -> {
-            $x("//div[@class='header__title']").shouldBe(visible);
+            $x(header).shouldBe(visible);
         });
         step("Choose your city", () -> {
-            $(".select-city__city").click();
-            $(".choice-city-modal__search-input").setValue("Уфа");
-            $(byText("Уфа")).click();
+            $(selectCityButton).click();
+            $(searchCity).setValue(city);
+            $(byText(city)).click();
         });
         step("Choose nearest office", () -> {
-            $(".choice-office__enabled").shouldBe(visible).click();
-            $("div.choice-office-modal__select-container").find(byText("Уфа г., Менделеева ул, д. 137")).click();
-            $(byText("OK")).click();
+            $(selectOfficeButton).shouldBe(visible).click();
+            $(cityList).find(byText(officeAddress)).click();
+            $(byText("ОК")).click();
         });
         step("Set visit date", () -> {
-            $(".form__select-wrappers").click();
+            $(formService).click();
             $(byText("Другое")).shouldBe(visible).click();
-            $(".form__select-day").setValue("11.06.2021").pressEnter();
+            $(visitDay).setValue("11.06.2021").pressEnter();
 
         });
         sleep(3000);
         step("Set visit time", () -> {
-            $(".time-piker-wrapper__input").click();
-            $x("//div[contains(text(),'16:00')]").click();
+            $(visitTime).click();
+            $x(visitOClock).click();
         });
         step("Full name input", () -> {
-            $(".form__contacts-fullName").setValue("Кучаев Булат Салаватович").sendKeys(Keys.TAB);
+            $(fullnameInput).setValue("Кучаев Булат Салаватович").sendKeys(Keys.TAB);
         });
 
         step("Birthday info input", () -> {
-            $(".form__birthday").setValue("12.04.1994").sendKeys(Keys.TAB);
+            $(birthdayInput).setValue("12.04.1994").sendKeys(Keys.TAB);
         });
 
         step("Phone number input", () -> {
-            $(".form__contacts-phone").setValue("9177191209");
+            $(phoneNumberInput).setValue("9177191209");
         });
 
         sleep(2000);
         step("Email input", () -> {
-            $(".form__contacts-email").shouldBe(visible).setValue("test@mail.ru").pressEnter();
+            $(emailInput).shouldBe(visible).setValue("test@mail.ru").pressEnter();
         });
         step("Check visit`s registration", () -> {
             $(byText("Записаться")).click();
-            $("div.thanks-wrapper__container").shouldHave(text("Ждем вас в отделении банка"));
+            $(finishRegistration).shouldHave(text("Ждем вас в отделении банка"));
         });
 
     }
