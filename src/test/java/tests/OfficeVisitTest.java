@@ -24,7 +24,6 @@ public class OfficeVisitTest extends TestBase {
             open("");
         });
         step("Click sign for office button", () -> {
-            //$(".credit-table__wrap").shouldBe(visible).shouldHave(text("Записаться в офис")).click();
             $x("//a[contains(.,'Записаться в офис')]").shouldBe(visible).click();
         });
 
@@ -62,7 +61,7 @@ public class OfficeVisitTest extends TestBase {
         });
 
         step("Phone number input", () -> {
-            $(".form__contacts-phone").setValue("8800555353").
+            $(".form__contacts-phone").setValue("8800555353").sendKeys(Keys.TAB);
         });
 
         sleep(2000);
