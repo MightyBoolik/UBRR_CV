@@ -11,6 +11,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static io.qameta.allure.Allure.step;
 
 
 @Tag("web")
@@ -31,18 +32,32 @@ public class ContributionCalculateTest extends TestBase {
     @Test
     @DisplayName("Check income from contribution")
     void percentContTest() {
-        open("");
-        $(creditForm).shouldHave(Condition.text("Рассчитайте свой кредит")).scrollTo();
-        $(sliderLine).shouldBe(visible);
-        $(sliderPoint).hover();
-        slider.slider();
-        $(creditTime).shouldBe(visible);
-        $(byText("5 лет")).click();
-        $(creditButton).click();
-        switchTo().window(1);
-        $(mobileFrame).shouldHave(text("Для получения кредита введите номер телефона"));
-        $(inputNumber).val(faker.phoneNumber().subscriberNumber(10));
-        $(byName(submitButton)).click();
+        step("Open main page", () -> {
+            open("");
+        });
+        step("Scroll to credit calculator", () -> {
+            $(creditForm).shouldHave(Condition.text("Рассчитайте свой кредит")).scrollTo();
+        });
+        step("Choose amount", () -> {
+            $(sliderLine).shouldBe(visible);
+            $(sliderPoint).hover();
+            slider.slider();
+        });
+        step("Choose credit term", () -> {
+            $(creditTime).shouldBe(visible);
+            $(byText("5 лет")).click();
+        });
+        step("Credit order button click", () -> {
+            $(creditButton).click();
+        });
+        step("Input phone number", () -> {
+            switchTo().window(1);
+            $(mobileFrame).shouldHave(text("Для получения кредита введите номер телефона"));
+            $(inputNumber).val(faker.phoneNumber().subscriberNumber(10));
+        });
+        step("Click submit button", () -> {
+            $(byName(submitButton)).click();
+        });
 
     }
 }
