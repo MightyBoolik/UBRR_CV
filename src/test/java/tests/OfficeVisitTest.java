@@ -61,7 +61,7 @@ public class OfficeVisitTest extends TestBase {
         });
 
         step("Phone number input", () -> {
-            $(".form__contacts-phone").setValue(faker.phoneNumber().subscriberNumber(9));
+            $(".form__contacts-phone").setValue("9177191209");
         });
 
         sleep(2000);
