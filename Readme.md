@@ -7,6 +7,8 @@
 [<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/allure.png" alt="allure" width="80" height="80"/>](https://docs.qameta.io/allure/)
 <img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/slack.png" alt="slack" width="80" height="80"/>
 <img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/telegram.png" alt="telegram" width="80" height="80"/>
+[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/jenkins.png" alt="jenkins" width="80" height="80"/>](https://www.jenkins.io/)
+[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/selenoid.png" alt="selenoid" width="80" height="80"/>](https://aerokube.com/selenoid/latest/)
 
 **Реализованы тесты:**
 
