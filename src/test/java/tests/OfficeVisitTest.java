@@ -1,5 +1,6 @@
 package tests;
 
+import allureAnnotations.JiraIssue;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -32,6 +33,7 @@ public class OfficeVisitTest extends TestBase {
             finishRegistration = "div.thanks-wrapper__container";
 
     @Test
+    @JiraIssue("QC3-36")
     @DisplayName("Sign up for the office")
     void visitOfficeButtonTest() {
         step("Open main page", () -> {

@@ -1,5 +1,6 @@
 package tests;
 
+import allureAnnotations.JiraIssue;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -23,6 +24,7 @@ public class MainPageTest extends TestBase {
             inputNumber = "#call-api-form .js-form-tel";
 
     @Test
+    @JiraIssue("QC3-36")
     @DisplayName("Main page should be loaded")
     void PageLoadedTest() {
         open("");
@@ -30,6 +32,7 @@ public class MainPageTest extends TestBase {
     }
 
     @Test
+    @JiraIssue("QC3-36")
     @DisplayName("Internet-bank")
     void InternetBankButtonTest() {
         open("");
@@ -41,6 +44,7 @@ public class MainPageTest extends TestBase {
     }
 
     @Test
+    @JiraIssue("QC3-36")
     @DisplayName("Test support chat")
     void phoneButtonTest() {
         open("");

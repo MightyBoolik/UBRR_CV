@@ -1,5 +1,6 @@
 package tests;
 
+import allureAnnotations.JiraIssue;
 import com.codeborne.selenide.Condition;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.DisplayName;
@@ -30,6 +31,7 @@ public class ContributionCalculateTest extends TestBase {
 
 
     @Test
+    @JiraIssue("QC3-36")
     @DisplayName("Check income from contribution")
     void percentContTest() {
         step("Open main page", () -> {
