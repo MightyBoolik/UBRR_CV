@@ -23,13 +23,18 @@ public class OfficeVisitTest extends TestBase {
             cityList = "div.choice-office-modal__select-container",
             officeAddress = "Уфа г., Менделеева ул, д. 137",
             formService = ".form__select-wrappers",
-            visitDay = ".form__select-day",
-            visitTime = ".time-piker-wrapper__input",
-            visitOClock = "//div[contains(text(),'16:00')]",
-            fullnameInput = ".form__contacts-fullName",
+            inputVisitDay = ".form__select-day",
+            visitDate = "11.06.2021",
+            inputVisitTime = ".time-piker-wrapper__input",
+            visitTime = "//div[contains(text(),'16:00')]",
+            fullNameInput = ".form__contacts-fullName",
+            fullName = "Кучаев Булат Салаватович",
             birthdayInput = ".form__birthday",
-            phoneNumberInput = ".form__contacts-phone",
+            birthday = "12.04.1994",
+            phonenumberInput = ".form__contacts-phone",
+            phonenumber = "9177191209",
             emailInput = ".form__contacts-email",
+            email = "test@mail.ru",
             finishRegistration = "div.thanks-wrapper__container";
 
     @Test
@@ -60,29 +65,29 @@ public class OfficeVisitTest extends TestBase {
         step("Set visit date", () -> {
             $(formService).click();
             $(byText("Другое")).shouldBe(visible).click();
-            $(visitDay).setValue("11.06.2021").pressEnter();
+            $(inputVisitDay).setValue(visitDate).pressEnter();
 
         });
         sleep(3000);
         step("Set visit time", () -> {
-            $(visitTime).click();
-            $x(visitOClock).click();
+            $(inputVisitTime).click();
+            $x(visitTime).click();
         });
         step("Full name input", () -> {
-            $(fullnameInput).setValue("Кучаев Булат Салаватович").sendKeys(Keys.TAB);
+            $(fullNameInput).setValue(fullName).sendKeys(Keys.TAB);
         });
 
         step("Birthday info input", () -> {
-            $(birthdayInput).setValue("12.04.1994").sendKeys(Keys.TAB);
+            $(birthdayInput).setValue(birthday).sendKeys(Keys.TAB);
         });
 
         step("Phone number input", () -> {
-            $(phoneNumberInput).setValue("9177191209");
+            $(phonenumberInput).setValue(phonenumber);
         });
 
         sleep(2000);
         step("Email input", () -> {
-            $(emailInput).shouldBe(visible).setValue("test@mail.ru").pressEnter();
+            $(emailInput).shouldBe(visible).setValue(email).pressEnter();
         });
         step("Check visit`s registration", () -> {
             $(byText("Записаться")).click();
