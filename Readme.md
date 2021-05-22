@@ -23,6 +23,8 @@
 ## :envelope: Поддержка Telegram-уведомлений
 
 ![alt text](files/telegram_ubrr.png "Allure")
+![alt text](files/notifi.png "Allure")
+![alt text](files/notifi1.png "Allure")
 
 [<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/java.png" alt="java_8" width="100" height="100"/>](https://www.oracle.com/ru/java/technologies/javase-jre8-downloads.html)
 [<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/junit_5.png" alt="junit_5" width="100" height="100"/>](https://junit.org/junit5/)
