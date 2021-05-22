@@ -20,7 +20,7 @@
 ![alt text](files/allure2_Ubrr.png "Allure")
 
 
-## Telegram-уведомления
+## :envelope: Поддержка Telegram-уведомлений
 
 ![alt text](files/telegram_ubrr.png "Allure")
 
