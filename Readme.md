@@ -12,8 +12,10 @@
 ## :video_camera: Запись видео с помощью Selenoid
 
 ![alt text](https://github.com/MightyBoolik/UBRR_CV/blob/0b58886d7af44c4196ea8f4a1ab0f5bb6552d4fb/files/Allure_ubrr.gif "**Видео теста**")
+## В качестве CI использован Jenkins
+![alt text](files/Screenshot_3.png "Jenkins")
 
-## :bar_chart: Для просмотра пошагового результата тестов использован Allure
+## :bar_chart: Просмотр результатов теста с помощью Allure
 
 ![alt text](files/Allure_ubrr.png "Allure")
 ![alt text](files/Aluure1_ubrr.png "Allure")
