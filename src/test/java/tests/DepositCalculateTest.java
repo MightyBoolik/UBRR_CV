@@ -14,9 +14,8 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-
 @Tag("web")
-public class ContributionCalculateTest extends TestBase {
+public class DepositCalculateTest extends TestBase {
     SliderTest slider = new SliderTest();
     Faker faker = new Faker();
 
@@ -28,7 +27,6 @@ public class ContributionCalculateTest extends TestBase {
             inputNumber = "#OpenBkithreestepsForm_mobile",
             submitButton = "btn_submit_step_1",
             creditForm = "#tab-32910";
-
 
     @Test
     @JiraIssue("QC3-36")
@@ -60,6 +58,5 @@ public class ContributionCalculateTest extends TestBase {
         step("Click submit button", () -> {
             $(byName(submitButton)).click();
         });
-
     }
 }

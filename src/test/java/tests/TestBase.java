@@ -12,9 +12,7 @@ public class TestBase {
     @BeforeAll
     public static void configHelper() {
         configureDriver();
-
     }
-
     @AfterEach
     public void addAttachments() {
         String sessionId = getSessionId();

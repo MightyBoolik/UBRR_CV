@@ -14,7 +14,7 @@ import static org.openqa.selenium.logging.LogType.BROWSER;
 
 public class DriverHelper {
     public static void configureDriver() {
-        addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
+        addListener("AllureSelenide", new AllureSelenide());
         Configuration.baseUrl = getUrl();
         Configuration.startMaximized = true;
         Configuration.timeout = 10000;
@@ -27,11 +27,11 @@ public class DriverHelper {
             Configuration.remote = ConfigHelper.getWebRemoteDriver();
         }
     }
-    public static String getConsoleLogs () {
+    public static String getConsoleLogs() {
         return String.join("\n", Selenide.getWebDriverLogs(BROWSER));
     }
 
     public static String getSessionId() {
-        return ((RemoteWebDriver) getWebDriver()).getSessionId().toString().replace("selenoid","");
+        return ((RemoteWebDriver) getWebDriver()).getSessionId().toString().replace("selenoid", "");
     }
-    }
+}
