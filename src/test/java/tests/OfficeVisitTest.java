@@ -5,8 +5,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import java.time.Duration;
+
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
@@ -70,7 +71,7 @@ public class OfficeVisitTest extends TestBase {
             $(inputVisitDay).setValue(visitDate).pressEnter();
         });
         step("Set visit time", () -> {
-            $(inputVisitTime).click();
+            $(inputVisitTime).shouldBe(enabled, Duration.ofSeconds(3)).click();
             $(withText(visitTime)).click();
         });
         step("Full name input", () -> {
