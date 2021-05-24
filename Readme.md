@@ -29,7 +29,7 @@
 ## :bar_chart: Просмотр результатов теста с помощью Allure
 
 ![alt text](files/Allure_ubrr.png "Allure")
-![alt text](files/Aluure1_ubrr.png "Allure")
+![alt text](files/Screenshot_5.png "Allure")
 ![alt text](files/allure2_Ubrr.png "Allure")
 
 ## :envelope: Поддержка Telegram-уведомлений
