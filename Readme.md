@@ -1,5 +1,5 @@
 ## Автотесты для сайта https://www.ubrr.ru/
-[<img src="https://starchenkov.pro/qa-guru/img/skills/Java.svg" alt="java_8" width="80" height="80"/>](https://www.oracle.com/ru/java/technologies/javase-jre8-downloads.html)
+[<img src="https://starchenkov.pro/qa-guru/img/skills/Java.svg" alt="java_8" width="60" height="60"/>](https://www.oracle.com/ru/java/technologies/javase-jre8-downloads.html)
 [<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/junit_5.png" alt="junit_5" width="80" height="80"/>](https://junit.org/junit5/)
 [<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/selenide.png" alt="selenide" width="80" height="80"/>](https://ru.selenide.org/)
 [<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/selenium.png" alt="selenium" width="80" height="80"/>](https://www.selenium.dev/)
