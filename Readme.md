@@ -1,13 +1,13 @@
 ## Автотесты для сайта https://www.ubrr.ru/
-[<img src="https://starchenkov.pro/qa-guru/img/skills/Java.svg" alt="java_8" width="60" height="60"/>](https://www.oracle.com/ru/java/technologies/javase-jre8-downloads.html)
-[<img src="https://starchenkov.pro/qa-guru/img/skills/JUnit5.svg" alt="junit_5" width="60" height="60"/>](https://junit.org/junit5/)
-[<img src="https://starchenkov.pro/qa-guru/img/skills/Selenide.svg" alt="selenide" width="60" height="60"/>](https://ru.selenide.org/)
+[<img src="https://starchenkov.pro/qa-guru/img/skills/Java.svg" alt="java_8" width="50" height="50"/>](https://www.oracle.com/ru/java/technologies/javase-jre8-downloads.html)
+[<img src="https://starchenkov.pro/qa-guru/img/skills/JUnit5.svg" alt="junit_5" width="50" height="50"/>](https://junit.org/junit5/)
+[<img src="https://starchenkov.pro/qa-guru/img/skills/Selenide.svg" alt="selenide" width="50" height="50"/>](https://ru.selenide.org/)
 [<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/selenium.png" alt="selenium" width="80" height="80"/>](https://www.selenium.dev/)
-[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/gradle.png" alt="gradle" width="80" height="80"/>](https://gradle.org/)
-[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/allure.png" alt="allure" width="80" height="80"/>](https://docs.qameta.io/allure/)
-<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/telegram.png" alt="telegram" width="80" height="80"/>
-[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/jenkins.png" alt="jenkins" width="80" height="80"/>](https://www.jenkins.io/)
-[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/selenoid.png" alt="selenoid" width="80" height="80"/>](https://aerokube.com/selenoid/latest/)
+[<img src="https://starchenkov.pro/qa-guru/img/skills/Gradle.svg" alt="gradle" width="50" height="50"/>](https://gradle.org/)
+[<img src="https://starchenkov.pro/qa-guru/img/skills/Allure_Report.svg" alt="allure" width="50" height="50"/>](https://docs.qameta.io/allure/)
+<img src="https://starchenkov.pro/qa-guru/img/skills/Telegram.svg" alt="telegram" width="50" height="50"/>
+[<img src="https://starchenkov.pro/qa-guru/img/skills/Jenkins.svg" alt="jenkins" width="50" height="50"/>](https://www.jenkins.io/)
+[<img src="https://starchenkov.pro/qa-guru/img/skills/Selenoid.svg" alt="selenoid" width="50" height="50"/>](https://aerokube.com/selenoid/latest/)
 
 **Реализованы тесты:**
 
