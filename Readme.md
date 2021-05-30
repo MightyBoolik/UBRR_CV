@@ -2,7 +2,7 @@
 [<img src="https://starchenkov.pro/qa-guru/img/skills/Java.svg" alt="java_8" width="50" height="50"/>](https://www.oracle.com/ru/java/technologies/javase-jre8-downloads.html)
 [<img src="https://starchenkov.pro/qa-guru/img/skills/JUnit5.svg" alt="junit_5" width="50" height="50"/>](https://junit.org/junit5/)
 [<img src="https://starchenkov.pro/qa-guru/img/skills/Selenide.svg" alt="selenide" width="50" height="50"/>](https://ru.selenide.org/)
-[<img src="https://github.com/SmileySpb/AutomationProject/blob/main/github/selenium.png" alt="selenium" width="80" height="80"/>](https://www.selenium.dev/)
+[<img src="https://starchenkov.pro/qa-guru/img/skills/Selenium.svg" alt="selenium" width="50" height="50"/>](https://www.selenium.dev/)
 [<img src="https://starchenkov.pro/qa-guru/img/skills/Gradle.svg" alt="gradle" width="50" height="50"/>](https://gradle.org/)
 [<img src="https://starchenkov.pro/qa-guru/img/skills/Allure_Report.svg" alt="allure" width="50" height="50"/>](https://docs.qameta.io/allure/)
 <img src="https://starchenkov.pro/qa-guru/img/skills/Telegram.svg" alt="telegram" width="50" height="50"/>
