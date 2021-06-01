@@ -41,3 +41,4 @@
 
 
 [![Telegram](https://badges.aleen42.com/src/telegram.svg)](https://t.me/Mightyboolik)
+[![Telegram](https://vkcom.github.io/icons/#28/logo_vk_outline)](https://t.me/Mightyboolik)
