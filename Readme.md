@@ -40,5 +40,5 @@
 ![alt text](files/Screenshot_4.png "Jira")
 
 
-[![Telegram](https://img.shields.io/badge/-Telegram-0b0a1a?style=for-the-badge&logo=telegram&logoColor=27A0D9)](https://t.me/Mightyboolik)
+[![Telegram](https://badges.aleen42.com/src/telegram.svg)](https://t.me/Mightyboolik)
 [![Vkontakte](https://img.shields.io/badge/Chat%20on-Telegram-brightgreen.svg)](https://vk.com/Mightyboolik)
