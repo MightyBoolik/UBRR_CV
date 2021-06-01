@@ -41,4 +41,4 @@
 
 
 [![Telegram](https://img.shields.io/badge/-Telegram-0b0a1a?style=for-the-badge&logo=telegram&logoColor=27A0D9)](https://t.me/Mightyboolik)
-[![Vkontakte](https://img.shields.io/badge/-Vkontakte-0b0a1a?style=for-the-badge&logo=Vk&logoColor=4F7DB3)](https://vk.com/Mightyboolik)
+[![Vkontakte](https://img.shields.io/badge/Chat%20on-Telegram-brightgreen.svg)](https://vk.com/Mightyboolik)
